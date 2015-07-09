@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./global.xhtml">
+
+            <ui:define name="content">
+
+                <p:toolbar>
+                    <f:facet name="left">
+                        <p:outputLabel value="Pesquisa: "/>
+
+                        <p:inputText value="#{pessoaController.filtro.nome}"/>
+                        <p:commandButton value="Filtrar" action="#{pessoaController.filtrar()}" update="listagem" icon="ui-icon-search"/>
+
+                        <p:commandButton value="Novo" ajax="false" action="#{pessoaController.novo()}" style="float:right" icon="ui-icon-document"/>
+
+
+                    </f:facet> 
+
+                </p:toolbar>
+
+
+
+                <p:dataTable id="listagem" value="#{pessoaController.listagem}" var="item">
+                    <p:column sortBy="id" headerText="Cod">
+                        #{item.id}
+                    </p:column> 
+
+                    <p:column sortBy="login" headerText="Login">
+                        #{item.login}
+                    </p:column>
+
+                    <p:column sortBy="nome" headerText="Nome">
+                        #{item.nome}
+                    </p:column>
+
+                    <p:column sortBy="cpf" headerText="CPF">
+                        #{item.cpf}
+                    </p:column>
+
+                    <p:column sortBy="rg" headerText="RG">
+                        #{item.rg}
+                    </p:column>
+
+                    <p:column sortBy="sexo" headerText="Sexo">
+                        #{item.sexo}
+                    </p:column>
+
+
+                    <p:column>
+                        <p:commandButton value="Editar" icon="ui-icon-pencil" action="editarPessoa.xhtml">
+                            <f:setPropertyActionListener target="#{pessoaController.entidade}" value="#{item}"/>
+                        </p:commandButton>
+                    </p:column>
+                </p:dataTable>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
