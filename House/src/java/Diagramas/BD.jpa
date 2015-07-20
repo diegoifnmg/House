@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings jaxb-support="false" id="_14364527500211" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" xmlns:ns4="http://nbmodeler.java.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <jpa:entity class="Pessoa" jaxb-root-element="false" static-metamodel="false" visibile="true" minimized="false" id="_14364527500274">
+        <jpa:table name="PESSOA"/>
+        <jpa:attributes>
+            <jpa:id name="id" attribute-type="java.lang.Long" visibile="true" id="_14364527500436">
+                <jpa:column name="ID" unique="false" nullable="false" insertable="true" updatable="true" table="PESSOA"/>
+            </jpa:id>
+            <jpa:basic name="ativo" optional="true" attribute-type="java.lang.Boolean" visibile="true" id="_14364527500447">
+                <jpa:column name="ativo" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA"/>
+            </jpa:basic>
+            <jpa:basic name="cpf" optional="true" attribute-type="java.lang.String" visibile="true" id="_14364527500448">
+                <jpa:column name="cpf" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="14"/>
+            </jpa:basic>
+            <jpa:basic name="email" optional="true" attribute-type="java.lang.String" visibile="true" id="_14364527500449">
+                <jpa:column name="email" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="255"/>
+            </jpa:basic>
+            <jpa:basic name="login" optional="true" attribute-type="java.lang.String" visibile="true" id="_143645275004410">
+                <jpa:column name="login" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="255"/>
+            </jpa:basic>
+            <jpa:basic name="nome" optional="true" attribute-type="java.lang.String" visibile="true" id="_143645275004411">
+                <jpa:column name="nome" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="255"/>
+            </jpa:basic>
+            <jpa:basic name="rg" optional="true" attribute-type="java.lang.String" visibile="true" id="_143645275004412">
+                <jpa:column name="rg" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="14"/>
+            </jpa:basic>
+            <jpa:basic name="senha" optional="true" attribute-type="java.lang.String" visibile="true" id="_143645275004413">
+                <jpa:column name="senha" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="255"/>
+            </jpa:basic>
+            <jpa:basic name="sexo" optional="true" attribute-type="java.lang.String" visibile="true" id="_143645275004414">
+                <jpa:column name="sexo" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="1"/>
+            </jpa:basic>
+            <jpa:basic name="telefone" optional="true" attribute-type="java.lang.String" visibile="true" id="_143645275004415">
+                <jpa:column name="telefone" unique="false" nullable="true" insertable="true" updatable="true" table="PESSOA" length="255"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Agua" jaxb-root-element="false" static-metamodel="false" visibile="true" minimized="false" id="_14364527500375">
+        <jpa:table name="AGUA"/>
+        <jpa:attributes>
+            <jpa:id name="id" attribute-type="java.lang.Long" visibile="true" id="_143645275004416">
+                <jpa:column name="ID" unique="false" nullable="false" insertable="true" updatable="true" table="AGUA"/>
+            </jpa:id>
+            <jpa:basic name="ativo" optional="true" attribute-type="java.lang.Integer" visibile="true" id="_143645275004417">
+                <jpa:column name="ativo" unique="false" nullable="true" insertable="true" updatable="true" table="AGUA"/>
+            </jpa:basic>
+            <jpa:basic name="dado" optional="true" attribute-type="java.lang.Float" visibile="true" id="_143645275004418">
+                <jpa:column name="dado" unique="false" nullable="true" insertable="true" updatable="true" table="AGUA" precision="12"/>
+            </jpa:basic>
+            <jpa:basic name="datauso" optional="true" attribute-type="java.util.Date" visibile="true" id="_143645275004419">
+                <jpa:column name="DATAUSO" unique="false" nullable="true" insertable="true" updatable="true" table="AGUA"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:diagram id="_14364527500222">
+        <plane elementRef="_14364527500211" id="_14364527500243_p">
+            <shape elementRef="_14364527500274" id="_14364527500274_gui">
+                <Bounds x="297.0" y="55.0" width="148.0" height="246.0"/>
+            </shape>
+            <shape elementRef="_14364527500375" id="_14364527500375_gui">
+                <Bounds x="32.0" y="32.0" width="132.0" height="126.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>

@@ -1,4 +1,4 @@
-package br.com.diegoalvescosta.tcc.DomainModel;
+ package br.com.diegoalvescosta.tcc.DomainModel;
 
 import java.io.Serializable;
 import java.util.Date;
