@@ -121,7 +121,7 @@ public class LM35Sensor {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LM35Sensor servico = new LM35Sensor();
+        final LM35Sensor servico = new LM35Sensor();
         servico.initialize();
 
         Thread t = new Thread() {
