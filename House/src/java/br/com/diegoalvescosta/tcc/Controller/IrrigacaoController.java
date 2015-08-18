@@ -51,7 +51,7 @@ public class IrrigacaoController {
     //Variaveis de Conexao
     private OutputStream output = null;
     SerialPort serialPort;
-    private final String porta="/dev/ttyS81";
+    private final String porta="/dev/ttyUSB1";
     private static final int timeOut = 2000; //2 segundos
     private static final int dataRate = 9600;
   

@@ -1,0 +1,15 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.com.diegoalvescosta.tcc.DomainModel;
+
+/**
+ *
+ * @author diego-dell
+ */
+
+public interface IAguaRepositorio extends RepositorioGenerico<Agua> {
+    
+}

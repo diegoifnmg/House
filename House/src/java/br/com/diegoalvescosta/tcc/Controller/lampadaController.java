@@ -19,7 +19,7 @@ import javax.faces.bean.RequestScoped;
 public class lampadaController {
 
    
-    public lampadaController() {
+    public lampadaController() throws InterruptedException {
         
         
     }
@@ -39,6 +39,8 @@ public class lampadaController {
         Thread.sleep(1000);
         serialPort.close();
     }
+    
+        
     
     
     //Envio de dados para arduino
@@ -68,11 +70,12 @@ public class lampadaController {
             }
         }
         if(portaId == null){
-            //mostrarErro("Não se pode conectar a porta");
+            System.out.println("Não se pode conectar a porta");
             System.exit(ERROR);
         }
         
         try{
+            System.out.println("Conectou!");
             serialPort = (SerialPort) portaId.open(this.getClass().getName(), timeOut);
             //parametros da porta serial
             
@@ -89,6 +92,7 @@ public class lampadaController {
         
         try {            
             output.write(dados.getBytes());
+            System.out.println("Enviou Dados!");
         } catch (IOException ex) {
             
         }
