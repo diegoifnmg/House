@@ -19,7 +19,7 @@ import javax.faces.bean.RequestScoped;
 public class lampadaController {
 
    
-    public lampadaController() throws InterruptedException {
+    public lampadaController() {
         
         
     }
