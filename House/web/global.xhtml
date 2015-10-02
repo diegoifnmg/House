@@ -18,38 +18,29 @@
         
         <h:form>
             <div id="top" align="center">
-                <img src="./resource/ecohouse.jpg" ></img>
+                <img src="resource.images/ecohouse.jpg" ></img>
             </div>
            
             <p:growl id="messages"/>
             <p:menubar>
                 <p:menuitem value="Home" url="index.xhtml" />
                     
-                
-                <p:submenu label="Cadastro" icon="ui-icon-document">
-                    <p:menuitem value="Usuário" url="listagemPessoa.xhtml" />
-                    
-                    
-                </p:submenu>
-                
-                <p:submenu label="Comôdos" icon="ui-icon-gear">
-                    <p:submenu label="Sala" icon="ui-icon-refresh">
-                        <p:menuitem value="Luz" actionListener="#{menuBean.save}" icon="ui-icon-disk" update="messages"/>
-                        <p:menuitem value="Ar Condicionado" actionListener="#{menuBean.update}" icon="ui-icon-arrowrefresh-1-w" update="messages"/>
+                <p:submenu label="Cadastro" icon="ui-icon-gear">
+                    <p:submenu label="Usuário" icon="ui-icon-refresh">
+                        <p:menuitem value="Novo" url="editarPessoa.xhtml"/>
+                        <p:menuitem value="Listagem" url="listagemPessoa.xhtml" />
                     </p:submenu>
+                    
                     <p:submenu label="Quarto" icon="ui-icon-newwin">
                         <p:menuitem value="Luz" actionListener="#{menuBean.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
                         <p:menuitem value="Ar Condicionado" actionListener="#{menuBean.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
                     </p:submenu>
-                </p:submenu>
-                
+                </p:submenu>                
+
                 <p:submenu label="Segurança" icon="ui-icon-document">
                     <p:menuitem value="Usuário" url="listagemAdministrador.xhtml" />
-                    
-                    
                 </p:submenu>
                 
-
                 <p:submenu label="Relatórios" icon="ui-icon-pencil">
                     <p:menuitem value="Água" url="#" icon="ui-icon-arrowreturnthick-1-w" />
                     <p:menuitem value="Luz" url="LuzRelatorio.xhtml" icon="ui-icon-arrowreturnthick-1-e" />
@@ -66,7 +57,9 @@
                 </p:submenu>
 
                 <f:facet name="options">
-                    
+                    <span style="margin-right: 60px">
+                        Olá Usuário!
+                    </span>
                     <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
                 </f:facet>
 
