@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+        <ui:composition template="./global.xhtml">
+
+            <ui:define name="content">
+
+                <p:growl id="msgs" showDetail="true" sticky="true" />
+
+                <h:panelGrid columns="2" cellpadding="10">
+                    <p:growl id="mensagens" />
+                    <p:panelGrid columns="2">
+
+                        <f:facet name="header">
+                            <h:outputLabel for="titulo" value="Configurações Luz" style="font-weight:bold" />
+                        </f:facet>
+
+                        <p:outputLabel for="KwH" value="Valor do Quilowatt-hora(KwH):" />
+                        <p:inputText id="KwH"  required="true" requiredMessage="O campo Login deve ser preenchido!"/>
+
+                        <p:outputLabel for="bandeira" value="Bandeiras:" />
+                        <p:selectManyCheckbox id="bandeira" >
+                            <f:selectItem itemLabel="Verde" itemValue="0" />
+                            <f:selectItem itemLabel="Amarela" itemValue="1" />
+                            <f:selectItem itemLabel="Vermelha" itemValue="2" />
+                        </p:selectManyCheckbox>
+
+
+
+                        
+
+                        <f:facet name="footer">
+                            <p:commandButton value="Salvar" update="mensagens" actionListener="#{pessoaController.salvar()}" icon="ui-icon-disk">
+                                <p:confirm header="Confirmation" message="Deseja Salvar?" icon="ui-icon-alert" />
+                            </p:commandButton>
+
+                            <p:commandButton value="Excluir" update="mensagens" actionListener="#{pessoaController.excluir()}" icon="ui-icon-trash">
+                                <p:confirm header="Excluir" message="Deseja Excluir?" icon="ui-icon-alert" />
+                            </p:commandButton>
+
+
+
+                            <p:commandButton ajax="false" immediate="true" value="Voltar" action="listagemPessoa.xhtml" icon="ui-icon-arrowreturnthick-1-w"/>
+
+
+                            <p:confirmDialog global="true" showEffect="fade" hideEffect="explode">
+                                <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes"  icon="ui-icon-check" />
+                                <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                            </p:confirmDialog>
+
+                            <p:confirmDialog header="Excluir" showEffect="fade" hideEffect="explode">
+                                <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes"  icon="ui-icon-check" />
+                                <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                            </p:confirmDialog>
+
+                        </f:facet>
+
+                    </p:panelGrid>
+                </h:panelGrid>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>
+
+

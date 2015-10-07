@@ -13,22 +13,12 @@
             <ui:define name="content">
                 <h:form>
                     
+                    <p:chart type="line" model="#{chartView.multiAxisModel}" style="height:400px;" responsive="true" />
                     
                     
                     
                     
-                    <p:layoutUnit position="center">
-                        Lampada Quarto
-                        <p:commandButton action="#{lampadaController.LigarQuarto()}" value="ON" />
-                        <p:commandButton action="#{lampadaController.DesligarQuarto()}" value="OFF" />
-                        
-                    </p:layoutUnit>
-
-                    <p:layoutUnit position="center">
-                        Irrigação Jardim
-                        <p:commandButton action="#{irrigacaoController.LigarIrrigacao()}" value="ON" />
-                        <p:commandButton action="#{irrigacaoController.DesligarIrrigacao()}" value="OFF" />
-                    </p:layoutUnit>
+                    
 
                 </h:form>                         
             </ui:define>
